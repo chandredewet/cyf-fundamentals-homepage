@@ -110,6 +110,12 @@ figure {
   display: flex;
 }
 
+#lessons {
+  margin-top: 0px;  
+  padding: 50px 50px 0px;
+  font-size: 32px;  
+}
+
 .lessons-container {  
   font-size: 20px;
   padding: 50px;
