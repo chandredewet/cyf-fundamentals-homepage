@@ -2,28 +2,21 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Personal Home  Improved 4.1</title>
+  <title>The Digital and Historical Log of Chandre DeWet</title>
   <link rel='stylesheet' href='https://unpkg.com/jest-lite@1.0.0-alpha.4/dist/prettify.css'>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <title>The Digital and Historical Log of Chandre DeWet</title>
 </head>
 
-<body>
+<body id="fullpage">
   <header class="c-site-header">
-    <nav aria-label="Main Site Links.">
+    <nav aria-label="Main Site Links." class="changemode">
       <a href="#aboutme">about me</a>
       <a href="#tech">tech+history</a>
       <a href="#history">history</a>
       <a href="#lessons">lessons learnt</a>
-      <a href="#links">links</a>
+      <a href="#links">links</a>      
+      <button id="daymode">day mode</button>
+      <button id="nightmode">night mode</button>
     </nav>
     <section class="hero">
       <h1>The Digital and Historical Log of Chandre De Wet</h1>
@@ -63,31 +56,31 @@
     <article>
       <h2 id="history">History</h2>
       <section id="history-container">
-        <div class="card">
+        <div class="card changemode">
           <div class="card-body">
             <h5 class="card-title">MAASDORP</h5>
             <p class="card-text">Family Groups Represented by German Lineage - by Christian Matzdorf/Maasdorp arriving in 1695, from,the north in Pasewalk, possibly convinced to work for the VOC by zielverkopers who lure poor farm boys to work for the VOC giving them lodging till they get a job, and ending up having to spend the first 5 years of working to pay back. Starting as a sailor, which was one above Slave in the VOC, to a Wagon Maker, to a Pub called Varietas Delectat, to being part of the Dragoons and owning farms. Christian is my grandmother's grandmother's grandfather's grandfather's father, our progenitor and inspires me to take the opportunities that come my way.</p>
           </div>
         </div>
-        <div class="card">
+        <div class="card changemode">
           <div class="card-body">
             <h5 class="card-title">VAN BENGAL</h5>
             <p class="card-text">Indian/Bengal Lineage: Ansela van Bengal, to become one of the richest women at the Cape, herself a child slave stolen from Bengal and taken to Indonesia. Later in life she is sold to Jan Van Riebeeck and is part of his ship and slaves brought to the Cape. She is freed by Abraham Gabemma? and becomes very wealthy managing her estate well after her husband Arnoldus Basson's death. Her daughter Maria Basson marries Christian. What inspires me is that in 2014 going to India and being in the Ganges River, at that stage I did not know I am a 10th generation of her. Since going to India, people have told me in India and the USA I look Indian, and also I have met several Bengali people. I would like to believe in going to India, somehow Ansela was able/touch home again by one of her descendants going home.</p>
           </div>
         </div>
-        <div class="card">
+        <div class="card changemode">
           <div class="card-body">
             <h5 class="card-title">BOONZAAIER</h5>
             <p class="card-text">The town of Franschhoek is filled with mixed-race people with the surname Boonzaaier. Having looked at the baptismal registers and archives, and there being only one white Boonzaaier in the time period most were born, him being a foreman with a mixed wife, my theory is that when slavery ended they adopted his surname. There is just too many Boonzaaiers to all be one person's children. Also interesting to note is many people still stay in the same places and farms so it is not too hard to link original slaves with present day families. My intention is to restore identity in region and make people aware that there were more than just the French in Franschhoek.</p>
           </div>
         </div>
-        <div class="card">
+        <div class="card changemode">
           <div class="card-body">
             <h5 class="card-title">CLARKE</h5>
             <p class="card-text">Genealogy began sometime in the nineties with a school project, my grandmother telling me her grandfather Jesse Clarke was one of 2 brothers who came from England. The one married a white woman the other a "Baster Vrou", Christina. Continuing this journey helped me uncover alot of Baster history but also realise, I have alot in common with the British Settlers, as apartheid made us believe each story was only for one group. It was in fact not only 2 brothers who came but the whole family and my dear Jesse's father died in those frontier wars.</p>
           </div>
         </div>
-        <div class="card">
+        <div class="card changemode">
           <div class="card-body">
             <h5 class="card-title">DE WET</h5>
             <p class="card-text">Whenever asking whether we related to Pniel De Wets, the answer was always No. But after I took a drive too Pniel to find out answers, the next week I discovered the probate of my father's greatgrandfather and found he was born in Pniel. More mysteries: The owner of his wife's mother during slavery was a De Wet on Solms Delta where his father was born, first as Benjamin Salamons and later changing the surname to De Wet. My grandfather once got a fishing rod for free from the old De Wet Sports Shop when discovered they are related. Also there is a white De Wet farm in Robertson called Zandvliet, Solms Delta was first called Zandvliet, and where our De Wets end up today is Sandvlei, Zandvliet??? If we connect to the De Wet tree then my father is also connected to Ansela van Bengal as my mother is, as her daughter Anna de Koning marries Olof Bergh and their daughter marries the first de Wet.</p>
@@ -124,12 +117,10 @@ Don't delete!-->
   <aside id="tests" aria-label="Test Readout." aria-live="polite" style="overflow:auto">
   </aside>
 
-</body>
-
-</html>
 <!-- partial -->
-  <script src='https://unpkg.com/jest-lite@1.0.0-alpha.4/dist/core.js'></script>
-<script src='https://unpkg.com/jest-lite@1.0.0-alpha.4/dist/prettify.js'></script><script  src="./script.js"></script>
+<script src='https://unpkg.com/jest-lite@1.0.0-alpha.4/dist/core.js'></script>
+<script src='https://unpkg.com/jest-lite@1.0.0-alpha.4/dist/prettify.js'></script>
+<script  src="./script.js"></script>
 
 </body>
 </html>
