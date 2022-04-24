@@ -1,3 +1,54 @@
+document.getElementById("daymode").addEventListener("click", (event) => {
+  let element_fullSite = document.getElementById("fullpage");
+  element_fullSite.style.color = "#55b4b0";
+  element_fullSite.style.backgroundColor = "rgb(239, 239, 239)";
+
+  // additional dom methods
+
+  const collection = document.getElementsByClassName("changemode");
+  for (let i = 0; i < collection.length; i++) {
+    collection[i].style.color = "#55b4b0";
+    collection[i].style.backgroundColor = "rgb(239, 239, 239)";
+  }
+
+  const anchorcollection = document.getElementsByTagName("a");
+  for (let i = 0; i < anchorcollection.length; i++) {
+    anchorcollection[i].style.color = "#55b4b0";
+  }
+
+  const btncollection = document.getElementsByTagName("button");
+  for (let i = 0; i < btncollection.length; i++) {
+    btncollection[i].style.color = "rgb(239, 239, 239)";
+    btncollection[i].style.backgroundColor = "#55b4b0";
+  }
+});
+
+document.getElementById("nightmode").addEventListener("click", (event) => {
+  let element_page2 = document.getElementById("fullpage");
+  element_page2.style.color = "#9999ff";
+  element_page2.style.backgroundColor = "#3B384B";
+  // let element_about = document.getElementById("aboutNight");
+  // element_about.style.color = "#9999ff";
+  // element_about.style.backgroundColor = "#000066";
+
+  const collection = document.getElementsByClassName("changemode");
+  for (let i = 0; i < collection.length; i++) {
+    collection[i].style.color = "#9999ff";
+    collection[i].style.backgroundColor = "#3B384B";
+  }
+
+  const anchorcollection = document.getElementsByTagName("a");
+  for (let i = 0; i < anchorcollection.length; i++) {
+    anchorcollection[i].style.color = "#9999ff";
+  }
+
+  const btncollection = document.getElementsByTagName("button");
+  for (let i = 0; i < btncollection.length; i++) {
+    btncollection[i].style.color = "#3B384B";
+    btncollection[i].style.backgroundColor = "#9999ff";
+  }
+});
+
 /* =================
   TESTS, LOOK AT THESE
   Reading tests will always help you discover your requirements.
@@ -7,7 +58,7 @@
 
 const {
   core: { test, expect, run },
-  prettify
+  prettify,
 } = window.jestLite;
 
 /* =================
