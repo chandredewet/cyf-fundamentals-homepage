@@ -1,3 +1,40 @@
+var mypics, testarray;
+
+mypics = [
+  "https://user-images.githubusercontent.com/65244840/166117168-9462f100-08fd-44ab-936a-709178dbb715.JPG",
+  "https://user-images.githubusercontent.com/65244840/166116185-199d86ba-6e9f-43ed-b83d-f43c0ba008db.jpg",
+  "https://user-images.githubusercontent.com/65244840/166116200-b1138ca0-8813-42ff-a569-ebf6b292b57b.jpg",
+  "https://user-images.githubusercontent.com/65244840/166117205-f43e10a2-ebdb-42eb-b06a-f35717ee7f43.jpg",
+  "https://user-images.githubusercontent.com/65244840/166116241-b706fa05-6524-4228-861b-6793142a41ac.jpg",
+  "https://user-images.githubusercontent.com/65244840/166116347-d945c531-b08f-47b8-bf8e-33b06e53c4ee.jpg",
+  "https://user-images.githubusercontent.com/65244840/166116962-c9d291cd-0257-41c8-8007-44e8f54acc2a.jpg",
+];
+testarray = ["1", "2", "3", "4", "5", "6", "7"];
+let element_myimg = document.getElementById("myimg");
+element_myimg.setAttribute("src", mypics[0]);
+let element_picno = document.getElementById("picno");
+element_picno.innerText = testarray[0];
+
+document.getElementById("next").addEventListener("click", (event) => {
+  testarray.push(testarray.shift());
+  mypics.push(mypics.shift());
+  let element_picno2 = document.getElementById("picno");
+  element_picno2.innerText = testarray[0];
+  let element_myimg2 = document.getElementById("myimg");
+  element_myimg2.replaceChildren();
+  element_myimg2.setAttribute("src", mypics[0]);
+});
+
+document.getElementById("prev").addEventListener("click", (event) => {
+  testarray.unshift(testarray.pop());
+  mypics.unshift(mypics.pop());
+  let element_picno3 = document.getElementById("picno");
+  element_picno3.innerText = testarray[0];
+  let element_myimg3 = document.getElementById("myimg");
+  element_myimg3.replaceChildren();
+  element_myimg3.setAttribute("src", mypics[0]);
+});
+
 document.getElementById("daymode").addEventListener("click", (event) => {
   let element_fullSite = document.getElementById("fullpage");
   element_fullSite.style.color = "#55b4b0";
@@ -48,72 +85,3 @@ document.getElementById("nightmode").addEventListener("click", (event) => {
     btncollection[i].style.backgroundColor = "#9999ff";
   }
 });
-
-/* =================
-  TESTS, LOOK AT THESE
-  Reading tests will always help you discover your requirements.
-  You can make this window bigger. 
-   ===================
-*/
-
-const {
-  core: { test, expect, run },
-  prettify,
-} = window.jestLite;
-
-/* =================
-  FIND ELEMENTS
-  These are all the elements we will look for.
-   ===================
-*/
-const getHeader = document.querySelectorAll("header"),
-  getH1 = document.querySelectorAll("h1"),
-  getSiteHeader = document.querySelectorAll(".c-site-header"),
-  getAria = document.querySelectorAll('nav[aria-label="Main Site Links."]'),
-  getMain = document.querySelectorAll("main"),
-  getFooter = document.querySelectorAll("footer"),
-  getSiteFooter = document.querySelectorAll(".c-site-footer"),
-  getIFrame = document.querySelectorAll("iframe"),
-  getImage = document.querySelectorAll("img"),
-  getWords = document.body.innerText;
-
-/* =================
-   ASSERTIONS 
-   These are the things we check are true about your page.
-   Read and update your HTML to discover the requirements.
-   The tests will run every time you update your code.
-   ===================
-*/
-test("There is at least one header element", () => {
-  expect(getHeader.length).toBeGreaterThanOrEqual(1);
-});
-test("There is at least one h1", () => {
-  expect(getH1.length).toBeGreaterThanOrEqual(1);
-});
-test("There is only one header element with the class c-site-header", () => {
-  expect(getSiteHeader.length).toBe(1);
-});
-test("There is a nav element with an aria-label of Main Site Links.", () => {
-  expect(getAria.length).toBeGreaterThanOrEqual(1);
-});
-test("There is only one main element", () => {
-  expect(getMain.length).toBe(1);
-});
-test("There is at least one footer element", () => {
-  expect(getFooter.length).toBeGreaterThanOrEqual(1);
-});
-test("There is only one footer element with the class c-site-footer", () => {
-  expect(getSiteFooter.length).toBe(1);
-});
-test("There is embedded video", () => {
-  expect(getIFrame.length).toBeGreaterThanOrEqual(1);
-});
-test("There is at least one image", () => {
-  expect(getImage.length).toBeGreaterThanOrEqual(1);
-});
-test("There are at least 500 words on the page", () => {
-  expect(getWords.length).toBeGreaterThanOrEqual(500);
-});
-
-const console = document.getElementById("tests");
-prettify.toHTML(run(), console);
