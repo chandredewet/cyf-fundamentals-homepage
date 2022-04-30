@@ -118,10 +118,15 @@ figure {
 
 
 #history2-container {
-  display: flex;
+ text-align: center;
 }
 
 .lessons-container {  
+  font-size: 20px;
+  padding: 50px;
+}
+
+.pics-container {  
   font-size: 20px;
   padding: 50px;
 }
@@ -138,12 +143,31 @@ a:link {
 }
 
 img {
-  display: block;
+  display: inline-block;
 }
 
 #links {
   padding-right: 500px;
 }
+
+.imagessection{
+  text-align: center;
+}
+
+.imgbtn{
+  padding: 10px;
+  margin: 10px;
+  font-size: smaller;
+}
+
+#myimg {
+  text-align: center;
+}
+
+.finalimgs {
+    justify-self: center;
+}
+
 
 footer {
   padding: 10px;
