@@ -1,3 +1,56 @@
+//cart
+
+var cart, cartprices, item;
+
+cart = [];
+cartprices = [];
+
+document.getElementById("showcart").addEventListener("click", (event) => {
+  let element_cartpic = document.getElementById("cartpic");
+  element_cartpic.setAttribute(
+    "src",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhsWTvQnZyL_qrEXnvAsCvo95ChQn5GcdPmA&usqp=CAU"
+  );
+  cart.forEach((item) => {
+    let element_cart = document.getElementById("cart");
+    let new_li = document.createElement("li");
+    new_li.innerText = item;
+
+    element_cart.appendChild(new_li);
+  });
+  let element_disptotal = document.getElementById("disptotal");
+  element_disptotal.innerText = " Current Total: R";
+  let new_span = document.createElement("span");
+  new_span.innerText = cartprices.reduce((a, b) => a + b, 0);
+
+  element_disptotal.appendChild(new_span);
+
+  console.log(new_span);
+});
+
+console.log(cartprices);
+
+document.getElementById("add1").addEventListener("click", (event) => {
+  cart.push("Archive Assistance");
+  cartprices.push(150);
+});
+
+document.getElementById("add2").addEventListener("click", (event) => {
+  cart.push("3 Level Family Tree");
+  cartprices.push(500);
+});
+
+document.getElementById("add3").addEventListener("click", (event) => {
+  cart.push("Speaker/Workshops");
+  cartprices.push(1000);
+});
+
+document.getElementById("add4").addEventListener("click", (event) => {
+  cart.push("Familytree App");
+  cartprices.push(50);
+});
+
+//image carousel
 var mypics, testarray;
 
 mypics = [
