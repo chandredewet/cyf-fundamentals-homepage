@@ -7,6 +7,7 @@
 }
 
 
+
 body {
   margin: 0;
   height: 100%;
@@ -52,6 +53,27 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+
+#shopping {
+  display: flex;
+}
+
+
+#showcart{
+  height: 50px;
+}
+#prodlist {
+  list-style: none;
+}
+
+.proditem{
+  margin: 0 0 10px 20px;
+}
+
+#cart{
+ margin-left: 50px;
+ 
 }
 
 h1 {
